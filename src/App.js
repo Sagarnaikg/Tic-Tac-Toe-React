@@ -57,7 +57,12 @@ function App() {
   return (
     <div className="container">
       <div className="header">
+        {/* header
+        =================================== */}
         <h2>Tic-Toc-Toe</h2>
+
+        {/* displaying diff players with thire symbol
+        =================================== */}
         <div style={{ display: "flex" }}>
           <PlayerCard
             player1={player1}
@@ -77,6 +82,8 @@ function App() {
         </div>
       </div>
 
+      {/* interface of the game
+        =================================== */}
       <div className="cover">
         <div className="game-body">
           {arr.map((item, index) => {
@@ -88,10 +95,16 @@ function App() {
           })}
         </div>
       </div>
+
+      {/* reset game
+        =================================== */}
       <div className="result">
         <button className="reset-btn" onClick={() => reload()}>
           <BiRevision size="25" color="#ffffff" />
         </button>
+
+        {/* displaying result
+        =================================== */}
         <WinnerCard gameOver={gameOver} player1={player1} />
       </div>
     </div>
